@@ -1,0 +1,27 @@
+#Anchorpoint Markup Language
+#Predefined Variables: e.g. ${path}
+#Environment Variables: e.g. ${MY_VARIABLE}
+#Full documentation: https://docs.anchorpoint.app/docs/actions/create-actions
+
+version: "1.0"
+
+action:
+  #Must Have Properties
+  name: "Replicate AI Toolbox"
+
+  #Optional Properties
+  version: 1
+  id: "ap::package::replicate"
+  category: "ai"
+  type: package
+  enable: true
+  author: "Anchorpoint Software GmbH"
+  description: Uses hosted models on Replicate to perform various AI tasks such as tagging. Requires an API token from Replicate.
+
+  settings: package_settings.py
+
+  icon:
+    path: "icons/replicate_logo.svg"
+
+  actions:
+    - ap::replicate::tagging

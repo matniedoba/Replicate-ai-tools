@@ -1,0 +1,29 @@
+# Anchorpoint Markup Language
+# Predefined Variables: e.g. ${path}
+# Environment Variables: e.g. ${MY_VARIABLE}
+# Full documentation: https://docs.anchorpoint.app/Actions/Reference
+
+version: 1.0
+
+action:
+  name: "Tag with AI"
+
+  version: 1
+  id: "ap::replicate::tagging"
+  category: "ai"
+  type: python
+  author: "Anchorpoint Software GmbH"
+  description: "Creates Tags based on AI Image Detection"
+  enable: true
+  icon:
+    path: icons/tagImage.svg
+
+  python_packages:    
+  - replicate
+
+  script: "tag_ai.py"
+
+  register:
+    file:
+      enable: true
+      filter: "*.psd;*.exr;*.tga;*.obj;*.fbx;*.glb;*.gltf;*.hdr;*.png;*.jpg;*.tga" 
